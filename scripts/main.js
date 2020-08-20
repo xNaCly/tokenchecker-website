@@ -7,13 +7,17 @@ async function checkToken() {
 	response = await response.json();
 
 	var profile = document.querySelector("#profile");
-	profile.src = "https://cdn.discordapp.com/avatars/" + response.id + "/" + response.avatar + ".png?size=128";
+	if (response.avatar) {
+		profile.src = "https://cdn.discordapp.com/avatars/" + response.id + "/" + response.avatar + ".png?size=128";
+	} else {
+		profile.src = "https://cdn.discordapp.com/embed/avatars/1" + ".png";
+	}
 	profile.style.display = "flex";
 
 	var tag = (document.getElementById("tag").textContent = response.username + "#" + response.discriminator);
 
 	var email = document.getElementById("email");
-	email.textContent = response.email;
+	email.textContent = response.email ? response.email : "no email";
 
 	var ver = document.getElementById("verified");
 	ver.textContent = response.verified ? "verified" : "not verified";
@@ -25,7 +29,7 @@ async function checkToken() {
 	loc.textContent = response.locale;
 
 	var tel = document.getElementById("phone");
-	tel.textContent = response.phone;
+	tel.textContent = response.phone ? response.phone : "no phone";
 	document.getElementsByClassName("list-group")[0].style.display = "block";
 
 	/*
