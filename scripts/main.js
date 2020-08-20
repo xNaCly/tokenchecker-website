@@ -2,7 +2,7 @@ async function checkToken() {
 	/*
 	get all fields
 	*/
-	var alert = document.getElementById("alert-doe");
+	var alerter = document.getElementById("alert-doe");
 	var list = document.getElementsByClassName("list-group")[0];
 	var id = document.getElementById("id");
 	var tag = document.getElementById("tag");
@@ -16,7 +16,7 @@ async function checkToken() {
 	/*
 	make everything invisible if new token is submitted
 	*/
-	alert.style.display = "none";
+	alerter.style.display = "none";
 	list.style.display = "none";
 	profile.style.display = "none";
 	/*
@@ -37,17 +37,22 @@ async function checkToken() {
 			"phone": null
 		}
 	*/
-	let response = await fetch("https://discordapp.com/api/v6/users/@me", {
-		method: "GET",
-		headers: { Authorization: token },
-	});
-	response = await response.json();
+	let response;
+	try {
+		response = await fetch("https://discordapp.com/api/v6/users/@me", {
+			method: "GET",
+			headers: { Authorization: token },
+		});
+		response = await response.json();
+	} catch (e) {
+		return alert(`Request failed: ${e}`);
+	}
 
 	/*
 	if token is invalid => means if no username returned
 	*/
 	if (!response.username) {
-		return (alert.style.display = "block");
+		return (alerter.style.display = "block");
 	}
 
 	/*
