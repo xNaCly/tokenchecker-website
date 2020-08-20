@@ -10,7 +10,7 @@ async function checkToken() {
 	if (response.avatar) {
 		profile.src = "https://cdn.discordapp.com/avatars/" + response.id + "/" + response.avatar + ".png?size=128";
 	} else {
-		profile.src = "https://cdn.discordapp.com/embed/avatars/1" + ".png";
+		profile.src = "https://cdn.discordapp.com/embed/avatars/" + (response.discriminator % 5) + ".png?size=128";
 	}
 	profile.style.display = "flex";
 
