@@ -1,0 +1,33 @@
+html {
+	font-size: 15px;
+	font-family: "Open Sans", sans-serif;
+}
+.output {
+	width: 900px;
+}
+.list-group {
+	display: none;
+	/* display: flex; */
+	/* align-items: center; */
+	/* justify-content: center; */
+	text-align: center;
+}
+#profile {
+	display: none;
+	border-radius: 50%;
+}
+.btn.btn-primary {
+	margin-left: 10px;
+}
+.main {
+	margin-top: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.image {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 10px;
+}
