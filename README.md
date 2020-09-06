@@ -10,7 +10,7 @@
 [![made-with-bootstrap](https://img.shields.io/badge/Made%20with-Bootstrap-7952b3?style=flat)](https://getbootstrap.com/)
 # What it looks like:
 <kbd>
-<img src="https://cdn.discordapp.com/attachments/638844015084568597/746048345541443594/unknown.png">
+<img src="https://cdn.discordapp.com/attachments/737401768098398389/752144643336175707/2020-09-06-13-57-23-1.gif">
 </kbd>
 
 # security:
