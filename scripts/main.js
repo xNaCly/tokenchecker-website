@@ -72,10 +72,10 @@ async function checkToken() {
 
 	switch (phoneBlockCheck) {
 		case 200:
-			phoneBlockCheck = "not phoneblocked";
+			phoneBlockCheck = "not phone locked";
 			break;
 		default:
-			phoneBlockCheck = "phoneblocked";
+			phoneBlockCheck = "phone locked";
 			break;
 	}
 
