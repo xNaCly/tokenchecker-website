@@ -12,6 +12,7 @@ async function checkToken() {
 	var ver = document.getElementById("verified");
 	var profile = document.querySelector("#profile");
 	var token = document.getElementsByClassName("output")[0].value;
+	var phoneblocked = document.getElementById("phoneblocked");
 
 	/*
 	make everything invisible if new token is submitted
@@ -56,6 +57,29 @@ async function checkToken() {
 	}
 
 	/*
+	if response.status !== 200 -> account is phoneblocked
+	*/
+	let phoneBlockCheck;
+	try {
+		phoneBlockCheck = await fetch("https://discordapp.com/api/v6/users/@me/library", {
+			method: "GET",
+			headers: { Authorization: token },
+		});
+		phoneBlockCheck = phoneBlockCheck.status;
+	} catch (e) {
+		return alert(`Request failed: ${e}`);
+	}
+
+	switch (phoneBlockCheck) {
+		case 200:
+			phoneBlockCheck = "not phoneblocked";
+			break;
+		default:
+			phoneBlockCheck = "phoneblocked";
+			break;
+	}
+
+	/*
 	check if user has custom profile picture
 	*/
 	if (response.avatar) {
@@ -69,10 +93,11 @@ async function checkToken() {
 	*/
 	tag.textContent = response.username + "#" + response.discriminator;
 	email.textContent = response.email ? response.email : "no email";
-	ver.textContent = response.verified ? "verified" : "not verified";
-	tel.textContent = response.phone ? response.phone : "no phone";
+	ver.textContent = response.verified ? "Email verified" : "Email not verified";
+	tel.textContent = response.phone ? response.phone : "no phonenumber";
 	id.textContent = response.id;
 	loc.textContent = response.locale;
+	phoneblocked.textContent = phoneBlockCheck;
 
 	/*
 	make list & profile picture visible
