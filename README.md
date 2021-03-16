@@ -1,6 +1,6 @@
-<p align="center">
+<!--<p align="center">
     <img style="border-radius: 100px" width="128" height="128" src="https://avatars0.githubusercontent.com/u/47723417?s=460&amp;u=10c488f1c4e0644b839df15ecefbfef2a9869305&amp;v=4">
-</p>
+</p>-->
 
 # Tokenchecker
 > simple, lightweight webapp to check if a token is valid and have a look at the tokens data
