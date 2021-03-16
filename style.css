@@ -40,8 +40,9 @@
 	margin-left: 1rem;
 	color: var(--accent2);
 	background: var(--background2);
-	height: 2rem;
+	/* min-height: min-content; */
 	width: 10%;
+	min-width: min-content;
 	border: none;
 }
 .hide {
