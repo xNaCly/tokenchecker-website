@@ -15,6 +15,6 @@
 
 # security:
 - direct request to discord, no redirects:
-<kbd>
-<img src="https://cdn.discordapp.com/attachments/638844015084568597/746043705890308146/unknown.png">
-</kbd>
+    - [req1](https://github.com/xNaCly/tokenchecker-website/blob/master/scripts/main.js#L44-L53)
+    - [req2](https://github.com/xNaCly/tokenchecker-website/blob/master/scripts/main.js#L66-L75)
+
