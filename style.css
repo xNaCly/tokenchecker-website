@@ -1,46 +1,76 @@
-html {
-	font-size: 15px;
-	font-family: "Open Sans", sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
+:root {
+	--accent: rgb(114, 137, 218);
+	--accent2: #8ea1e1;
+	--background: #36393f;
+	--background2: #2f3136;
+	--text-color: #dcddde;
+	--text-color2: #72767d;
 }
-.output {
-	width: 900px;
+
+* {
+	font-size: 15pt;
+	font-family: "JetBrains Mono", monospace;
+	background-color: var(--background);
+	color: var(--text-color);
 }
-.list-group {
-	display: none;
-	/* display: flex; */
-	/* align-items: center; */
-	/* justify-content: center; */
-	text-align: center;
-}
-#profile {
-	display: none;
-	border-radius: 50%;
-	max-height: 128px;
-	max-width: 128px;
-}
-.btn.btn-primary {
-	margin-left: 10px;
+.container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 .main {
-	margin-top: 10px;
+	width: 75%;
 	display: flex;
-	align-items: center;
 	justify-content: center;
+	margin-bottom: 1rem;
 }
-.image {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin-bottom: 10px;
+.main > input {
+	background: var(--background2);
+	color: var(--accent2);
+	width: 80%;
+	height: 2rem;
+	padding: 0;
+	padding-left: 0.25rem;
+	border: none;
 }
-.centered-error-div {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin-bottom: 10px;
+.default_button {
+	margin-left: 1rem;
+	color: var(--accent2);
+	background: var(--background2);
+	height: 2rem;
+	width: 10%;
+	border: none;
 }
-.alert.alert-danger.text-center {
+.hide {
 	display: none;
-	border-radius: 0.5rem;
-	width: 450px;
+}
+a {
+	border-bottom: 0.1rem solid var(--accent2);
+	color: rgb(114, 137, 218);
+	text-decoration: none;
+}
+li {
+	margin-bottom: 0.25rem;
+}
+footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	height: 50px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	margin-bottom: 0px;
+	padding: 1rem;
+}
+footer > span {
+	margin-right: 0.5rem;
+}
+.avatar {
+	border-radius: 50%;
+	border: 0.25rem solid var(--accent2);
 }
