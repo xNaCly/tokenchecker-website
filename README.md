@@ -3,11 +3,7 @@
 </p>
 
 # Tokenchecker
-
-[![made-with-javascript](https://img.shields.io/badge/Made%20with-Javascript-f1e05a?style=flat)](https://developer.mozilla.org/en/JavaScript)
-[![made-with-html](https://img.shields.io/badge/Made%20with-Html-e34c26?style=flat)](https://developer.mozilla.org/en/html)
-[![made-with-css](https://img.shields.io/badge/Made%20with-Css-563d7c?style=flat)](https://developer.mozilla.org/en/css)
-[![made-with-bootstrap](https://img.shields.io/badge/Made%20with-Bootstrap-7952b3?style=flat)](https://getbootstrap.com/)
+> simple, lightweight webapp to check if a token is valid and have a look at the tokens data
 # What it looks like:
 <kbd>
 <img src="https://cdn.discordapp.com/attachments/737401768098398389/752144643336175707/2020-09-06-13-57-23-1.gif">
