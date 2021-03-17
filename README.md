@@ -14,3 +14,5 @@
     - [req1](https://github.com/xNaCly/tokenchecker-website/blob/master/scripts/main.js#L44-L53)
     - [req2](https://github.com/xNaCly/tokenchecker-website/blob/master/scripts/main.js#L66-L75)
 
+# patchnotes:
+[latest](https://github.com/xNaCly/tokenchecker-website/commit/master)
