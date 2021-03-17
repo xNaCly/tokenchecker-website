@@ -5,7 +5,8 @@ async function checkToken() {
 	*/
 	var alerter = document.getElementById("alert");
 	var list = document.getElementsByClassName("list_group")[0];
-	var token = document.getElementsByClassName("input_main")[0].value;
+	var token_input = document.getElementsByClassName("input_main")[0];
+	var token = token_input.value;
 	var copyButton = document.getElementById("copybtn");
 
 	var id = document.getElementById("id");
@@ -18,14 +19,16 @@ async function checkToken() {
 	var phoneblocked = document.getElementById("phoneblocked");
 
 	/*
-	make everything invisible if new token is submitted
-	*/
-	alerter.style.display = "none";
-	list.style.display = "none";
-	profile.style.display = "none";
+	hide list, picture and invalid token alert
+ 	*/
+	list.classList.add("hide");
+	alerter.classList.add("hide");
+	profile.classList.add("hide");
+	copyButton.classList.add("hide");
+	token_input.classList.remove("invalid_token");
+
 	/*
 	fetch @me object from discord:
-
 	{
 			"id": "",
 			"username": "",
@@ -56,7 +59,9 @@ async function checkToken() {
 	if token is invalid => means if no username returned
 	*/
 	if (!response.username) {
-		return (alerter.style.display = "block");
+		alerter.classList.remove("hide");
+		token_input.classList.add("invalid_token");
+		return;
 	}
 
 	/*
@@ -111,9 +116,9 @@ async function checkToken() {
 	/*
 	make list & profile picture visible
 	*/
-	profile.style.display = "flex";
-	list.style.display = "block";
-	copyButton.style.display = "block";
+	profile.classList.remove("hide");
+	list.classList.remove("hide");
+	copyButton.classList.remove("hide");
 }
 function copyValues() {
 	navigator.clipboard.writeText(

@@ -40,7 +40,6 @@
 	margin-left: 1rem;
 	color: var(--accent2);
 	background: var(--background2);
-	/* min-height: min-content; */
 	width: 10%;
 	min-width: min-content;
 	border: none;
@@ -52,6 +51,10 @@ a {
 	border-bottom: 0.1rem solid var(--accent2);
 	color: rgb(114, 137, 218);
 	text-decoration: none;
+}
+ul {
+	list-style: none;
+	padding: 0;
 }
 li {
 	margin-bottom: 0.25rem;
@@ -74,4 +77,12 @@ footer > span {
 .avatar {
 	border-radius: 50%;
 	border: 0.25rem solid var(--accent2);
+}
+.alert {
+	color: red;
+}
+.invalid_token {
+	text-decoration-color: red !important;
+	text-decoration: underline;
+	text-decoration-style: wavy;
 }
