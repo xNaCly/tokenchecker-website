@@ -86,3 +86,6 @@ footer > span {
 	text-decoration: underline;
 	text-decoration-style: wavy;
 }
+button{
+	cursor: pointer;
+}
