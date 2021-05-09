@@ -7,7 +7,7 @@
 
 # showcase:
 <kbd>
-<img src="https://cdn.discordapp.com/attachments/737401768098398389/752144643336175707/2020-09-06-13-57-23-1.gif">
+<img src="https://user-images.githubusercontent.com/47723417/117578227-a95b4200-b0ed-11eb-97e4-8041e02983bb.gif"/>
 </kbd>
 
 # security:
